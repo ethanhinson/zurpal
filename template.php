@@ -267,14 +267,10 @@ function zurb_foundation_preprocess_block(&$variables) {
 
   // Add classes based on region.
   switch ($variables['elements']['#block']->region) {
-    // Clear blocks in this region
+    // Add a striping class
     case 'sidebar_first':
-      $variables['classes_array'][] = 'clearfix';
-    break;
-    // Add a striping class & clear blocks in this region
     case 'sidebar_second':
       $variables['classes_array'][] = 'block-' . $variables['zebra'];
-      $variables['classes_array'][] = 'clearfix';
     break;
 
     case 'header':
